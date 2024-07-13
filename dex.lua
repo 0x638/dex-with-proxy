@@ -3,7 +3,7 @@ local selection
 local cloneref = cloneref or function(...) return ... end
 
 local function fetchViaProxy(url)
-    local proxyUrl = "https://proxy-ashy-beta.vercel.app/api/proxy?url="
+    local proxyUrl = "https://corsproxy.io/?"
     local fullUrl = proxyUrl .. game:GetService("HttpService"):UrlEncode(url)
 
     local success, response = pcall(function()
@@ -17,6 +17,7 @@ local function fetchViaProxy(url)
         return nil
     end
 end
+
 
 local EmbeddedModules = {
 Explorer = function()
